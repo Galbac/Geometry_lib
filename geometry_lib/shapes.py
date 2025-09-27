@@ -1,7 +1,12 @@
+from abc import ABC, abstractmethod
 from math import pi, sqrt, isclose
 
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
 
-class Circle:
+class Circle(Shape):
     def __init__(self, radius):
         self._set_radius(radius)
 
@@ -26,7 +31,7 @@ class Circle:
         return self._radius
 
 
-class Triangle:
+class Triangle(Shape):
     def __init__(self, a, b, c):
         self._set_sides(a, b, c)
 
