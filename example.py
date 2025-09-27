@@ -1,5 +1,4 @@
-from geometry_lib.shapes import Circle, Triangle
-from geometry_lib.utils import calculate_area
+from geometry_lib import Triangle, Circle, calculate_area
 
 c = Circle(5)
 t = Triangle(3, 4, 5)
