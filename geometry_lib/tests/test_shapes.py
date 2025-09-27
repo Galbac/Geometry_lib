@@ -3,6 +3,7 @@ from unittest import TestCase
 from geometry_lib.shapes import Circle, Triangle
 
 
+
 class TestShapes(TestCase):
     def test_circle_area(self):
         c = Circle(5)
@@ -29,4 +30,10 @@ class TestShapes(TestCase):
         with self.assertRaises(ValueError):
             Circle('a')
 
+    def test_calculate_area(self):
+        from geometry_lib.utils import calculate_area
+        c = Circle(5)
+        t = Triangle(3, 4, 5)
+        self.assertAlmostEqual(calculate_area(c), 78.538, 2)
+        self.assertAlmostEqual(calculate_area(t), 6.0, 2)
 
